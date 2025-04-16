@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+bool isPalindrome(const string& word) {
+    string reversed = word;
+    reverse(reversed.begin(), reversed.end());
+    return word == reversed;
+}
+
+int main() {
+    string input;
+    cout << "Введите слово: ";
+    cin >> input;
+
+    if (isPalindrome(input)) {
+        cout << "Это палиндром!" << endl;
+    } else {
+        cout << "Это не палиндром." << endl;
+    }
+
+    return 0;
+}
